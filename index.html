@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Top Score PWA" />
+  <meta name="theme-color" content="#0b223f" />
+  <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" href="/images/icons/icon-192x192.png">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <!-- CSS -->
+  <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+  <!-- Google fonts  -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <title>Top Score</title>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav role="navigation">
+    <div class="nav-wrapper container">
+      <a href="/" class="brand-logo" id="logo-container" style="font-weight: 400;">top<span
+          style="font-weight: 600; color: #45C7FF;">SCORE</span></a>
+      <span class="right">
+        <a href="#" class="sidenav-trigger" data-target="burger-menu">
+          <img src="/images/icons/menu.svg" alt="icon" style="height: 24px;">
+        </a>
+      </span>
+
+      <ul class="topnav right hide-on-med-and-down"></ul>
+      <ul class="sidenav" id="burger-menu"></ul>
+    </div>
+  </nav>
+  <!-- end: Navbar -->
+
+  <!-- Content -->
+  <div class="load-page" style="display: none;">
+    <div class="body-content">
+      <!-- Load content -->
+    </div>
+
+    <footer class="page-footer" style="bottom: 0; left: 0; right: 0; position: relative;">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 l6" style="margin-bottom: 10px;">
+            <h5 class="white-text">topScore</h5>
+            <p class="grey-text text-lighten-2">
+              Website ini merupakan Progressive Web App, kamu bisa menginstalnya seperti Aplikasi native tanpa
+              harus membuka browser lagi. <br>
+              API from
+              <a href="https://www.football-data.org/"> www.football-data.org</a>
+            </p>
+          </div>
+          <div class="col s12 l4 offset-l2">
+            <h5 class="white-text">Follow me!</h5>
+            <a href="https://twitter.com/adibadri_dolken" target="false">
+              <div class="ic-social">
+                <img src="/images/social/twitter.svg" alt="" style="height: 32px;">
+              </div>
+            </a>
+            <a href="https://www.instagram.com/badriysha_/" target="false">
+              <div class="ic-social">
+                <img src="/images/social/instagram.svg" alt="" style="height: 32px;">
+              </div>
+            </a>
+            <a href="#" target="false">
+              <div class="ic-social">
+                <img src="/images/social/youtube.svg" alt="" style="height: 32px;">
+              </div>
+            </a>
+            <a href="" target="false">
+              <div class="ic-social">
+                <img src="/images/social/linkedin.svg" alt="" style="height: 32px;">
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container center-align">
+          <p class="grey-text text-darken-1">&copy; Copyright <a href="https://www.instagram.com/badriysha_/">Badri
+              Yusron</a> 2019</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Preloader -->
+  <div class="preloader-wrapper active" style="display: block;">
+    <div class="spinner-layer spinner-blue-only">
+      <div class="circle-clipper left">
+        <div class="circle"></div>
+      </div>
+      <div class="gap-patch">
+        <div class="circle"></div>
+      </div>
+      <div class="circle-clipper right">
+        <div class="circle"></div>
+      </div>
+    </div>
+  </div>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/check-sw.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/notif.js"></script>
+  <script src="js/football-api.js"></script>
+  <script src="js/getCompetitions.js"></script>
+  <script src="js/getSavedTeam.js"></script>
+  <script src="js/library/idb.js"></script>
+  <script src="js/football-db.js"></script>
+
+</body>
+
+</html>

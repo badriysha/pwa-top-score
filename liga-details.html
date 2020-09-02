@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Top Score PWA" />
+    <meta name="theme-color" content="#0b223f" />
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/images/icons/icon-192x192.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <!-- CSS -->
+    <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+    <!-- Google fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>Liga</title>
+</head>
+
+<body>
+    <!-- Content -->
+    <div class="load-page" style="display: none;">
+        <div id="body-content">
+            <div class="card" style="margin-top: 0;">
+                <div class="card-content card-header">
+                    <div class="ic-navbar">
+                        <a href="./index.html">
+                            <img src="/images/icons/back.svg" alt="" style="height: 28px;">
+                        </a>
+                    </div>
+                    <div class="container center" id="leagueDetail">
+                        <!-- Detail liga -->
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="description" style="margin-top: 30px;">
+                    <h5>KLASEMEN</h5>
+                    <p class="grey-text">Klik untuk melihat detail tim</p>
+                </div>
+                <div class="card">
+                    <table class="striped">
+                        <thead class="t-head">
+                            <tr>
+                                <th class="th-standings center" title="Peringkat">Ps</th>
+                                <th class="th-standings center" title="Nama tim">Team</th>
+                                <th class="th-standings center" title="Pertandingan">P</th>
+                                <th class="th-standings center" title="Menang">W</th>
+                                <th class="th-standings center" title="Seri">D</th>
+                                <th class="th-standings center" title="Kalah">L</th>
+                                <th class="th-standings center hide-on-small-only" title="Goals for">F</th>
+                                <th class="th-standings center hide-on-small-only" title="Goals againts">A</th>
+                                <th class="th-standings center hide-on-small-only" title="Poin">PTS</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="klasemen">
+                            <!-- forEach data tabel kompetisi -->
+                        </tbody>
+                    </table>
+                    <!-- end standings -->
+                </div>
+
+                <!-- Matches -->
+                <div class="description" style="margin-top: 30px;">
+                    <h5>PERTANDINGAN</h5>
+                    <p class="grey-text">Klik untuk melihat deatil pertandingan</p>
+                </div>
+                <ul class="collapsible" id="leagueMatch">
+                    <!-- foreach league matches -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 l6" style="margin-bottom: 10px;">
+                        <h5 class="white-text">topScore</h5>
+                        <p class="grey-text text-lighten-2">
+                            Website ini merupakan Progressive Web App, kamu bisa menginstalnya seperti Aplikasi native
+                            tanpa
+                            harus membuka browser lagi. <br>
+                            API from
+                            <a href="https://www.football-data.org/"> www.football-data.org</a>
+                        </p>
+                    </div>
+                    <div class="col s12 l4 offset-l2">
+                        <h5 class="white-text">Follow me!</h5>
+                        <a href="https://twitter.com/adibadri_dolken" target="false">
+                            <div class="ic-social">
+                                <img src="/images/social/twitter.svg" alt="" style="height: 32px;">
+                            </div>
+                        </a>
+                        <a href="https://www.instagram.com/badriysha_/" target="false">
+                            <div class="ic-social">
+                                <img src="/images/social/instagram.svg" alt="" style="height: 32px;">
+                            </div>
+                        </a>
+                        <a href="#" target="false">
+                            <div class="ic-social">
+                                <img src="/images/social/youtube.svg" alt="" style="height: 32px;">
+                            </div>
+                        </a>
+                        <a href="" target="false">
+                            <div class="ic-social">
+                                <img src="/images/social/linkedin.svg" alt="" style="height: 32px;">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container center-align">
+                    <p class="grey-text text-darken-1">&copy; Copyright <a
+                            href="https://www.instagram.com/badriysha_/">Badri
+                            Yusron</a> 2019</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Preloader -->
+    <div class="preloader-wrapper active" style="display: block;">
+        <div class="spinner-layer spinner-blue-only">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/check-sw.js"></script>
+    <script src="js/football-api.js"></script>
+    <script src="js/getStandings.js"></script>
+    <script src="js/getMatch.js"></script>
+    <script src="js/library/idb.js"></script>
+    <script src="js/football-db.js"></script>
+    <script src="js/helper.js"></script>
+
+    <!-- Service worker -->
+    <script>
+        window.onload = function () {
+            setTimeout(function () {
+                document.querySelector(".load-page").style.display = "block";
+                document.querySelector(".preloader-wrapper").style.display = "none";
+            }, 1800);
+
+            getStanding().then(function (competition) {
+                saveCompetition(competition);
+            });
+
+            getLeagueMatch();
+        }
+        $(document).ready(function () {
+            $('.collapsible').collapsible();
+        });
+    </script>
+
+</body>
+
+</html>

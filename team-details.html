@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Top Score PWA" />
+    <meta name="theme-color" content="#0b223f" />
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/images/icons/icon-192x192.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <!-- CSS -->
+    <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+    <!-- Google fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>Top Score</title>
+</head>
+
+<body>
+    <!-- Content -->
+    <div class="load-page" style="display: none;">
+        <div id="body-content">
+            <div class="card" style="margin-top: 0;">
+                <div class="card-content card-header">
+                    <div class="ic-navbar">
+                        <button onclick="history.back()" class="btn-flat">
+                            <img src="/images/icons/back.svg" alt="" style="height: 28px;">
+                        </button>
+                        <button class="right btn-flat" id="addFavorite">
+                            <img src="/images/icons/heart-border.svg" alt="" style="height: 32px;">
+                        </button>
+                        <a class="right btn-flat" id="delFavorite" title="Hapus favorit">
+                            <img src="/images/icons/heart-bg1.svg" alt="" style="height: 32px;">
+                        </a>
+                    </div>
+                    <div class="container center" id="teamHeader">
+                        <!-- isi header team -->
+                    </div>
+                </div>
+                <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width">
+                        <li class="tab"><a href="#detail">Detail</a></li>
+                        <li class="tab"><a href="#squad">Squad</a></li>
+                        <li class="tab"><a href="#matches">Match</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-content container">
+                <!-- Detail team -->
+                <div id="detail">
+                    <div class="card">
+                        <div class="row">
+                            <div class="col s3 m3">
+                                <ul class="ul-col-1">
+                                    <li>Nama</li>
+                                    <li>Tahun</li>
+                                    <li>Stadion</li>
+                                    <li>Email</li>
+                                    <li>Telpon</li>
+                                    <li>Website</li>
+                                    <li>Alamat</li>
+                                </ul>
+                            </div>
+                            <div class="col s8 m6" id="teamDetail">
+                                <!-- Isi detail team -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Squad -->
+                <div id="squad">
+                    <div class="card" style="box-shadow: none;">
+                        <table class="striped">
+                            <thead class="t-head">
+                                <tr>
+                                    <th class="th-standings center" title="Nomor punggung">No</th>
+                                    <th class="th-standings center" title="Nama pemain">Nama</th>
+                                    <th class="th-standings center hide-on-small-only" title="Negara">Negara</th>
+                                    <th class="th-standings center" title="Posisi">Pos</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="teamSquad">
+                                <!-- forEach player -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Match -->
+                <div id="matches">
+                    <div class="description" style="margin-top: 30px;">
+                        <h5>PERTANDINGAN</h5>
+                        <p class="grey-text">Klik untuk melihat detail pertandingan</p>
+                    </div>
+                    <ul class="collapsible" id="teamMatch">
+                        <!-- foreach league matches -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 l6" style="margin-bottom: 10px;">
+                        <h5 class="white-text">topScore</h5>
+                        <p class="grey-text text-lighten-2">
+                            Website ini merupakan Progressive Web App, kamu bisa menginstalnya seperti Aplikasi native
+                            tanpa
+                            harus membuka browser lagi. <br>
+                            API from
+                            <a href="https://www.football-data.org/"> www.football-data.org</a>
+                        </p>
+                    </div>
+                    <div class="col s12 l4 offset-l2">
+                        <h5 class="white-text">Follow me!</h5>
+                        <a href="https://twitter.com/adibadri_dolken" target="false">
+                            <div class="ic-social">
+                                <img src="/images/social/twitter.svg" alt="" style="height: 32px;">
+                            </div>
+                        </a>
+                        <a href="https://www.instagram.com/badriysha_/" target="false">
+                            <div class="ic-social">
+                                <img src="/images/social/instagram.svg" alt="" style="height: 32px;">
+                            </div>
+                        </a>
+                        <a href="#" target="false">
+                            <div class="ic-social">
+                                <img src="/images/social/youtube.svg" alt="" style="height: 32px;">
+                            </div>
+                        </a>
+                        <a href="" target="false">
+                            <div class="ic-social">
+                                <img src="/images/social/linkedin.svg" alt="" style="height: 32px;">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container center-align">
+                    <p class="grey-text text-darken-1">&copy; Copyright <a
+                            href="https://www.instagram.com/badriysha_/">Badri
+                            Yusron</a> 2019</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Preloader -->
+    <div class="preloader-wrapper active" style="display: block;">
+        <div class="spinner-layer spinner-blue-only">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/check-sw.js"></script>
+    <script src="js/teamMatch.js"></script>
+    <script src="js/getTeam.js"></script>
+    <script src="js/getSavedTeam.js"></script>
+    <script src="js/football-api.js"></script>
+    <script src="js/library/idb.js"></script>
+    <script src="js/football-db.js"></script>
+    <script src="js/helper.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('ul.tabs').tabs();
+            $('ul.tabs').tabs({
+                swipeable: false
+            });
+            $('ul.tabs').tabs('select', 'tab_id');
+
+            // Collapsible
+            $('.collapsible').collapsible();
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // loader
+            setTimeout(function () {
+                document.querySelector(".load-page").style.display = "block";
+                document.querySelector(".preloader-wrapper").style.display = "none";
+            }, 1500);
+
+            getTeamMatch();
+
+            let urlParams = new URLSearchParams(window.location.search);
+            let saved = Number(urlParams.get("favorite"));
+            let forDelete = Number(urlParams.get("id"));
+
+            // checkTeam(forDelete);
+            let add = document.getElementById("addFavorite");
+            let remove = document.getElementById("delFavorite");
+            let item = getTeam();
+
+            if (saved) {
+                add.style.display = 'none';
+                savedTeam();
+            } else if (!saved) {
+                remove.style.display = 'none';
+            } else {
+                let item = getTeam();
+            }
+
+            checkTeam(forDelete).then((msg) => {
+                add.style.display = "none";
+                remove.style.display = "block";
+            }).catch((msg) => {
+                add.style.display = "block";
+                remove.style.display = "none";
+            });
+
+            add.onclick = function () {
+                console.log("Tombol save di klik.");
+                item.then(function (team) {
+                    addFavoriteTeam(team);
+                    console.log(team);
+                });
+                add.style.display = "none";
+                remove.style.display = "block";
+            };
+
+            remove.onclick = function () {
+                console.log("Tombol delete di klik.");
+                delFavoriteTeam(forDelete);
+                remove.style.display = "none";
+                add.style.display = "block";
+            };
+        });
+    </script>
+
+</body>
+
+</html>

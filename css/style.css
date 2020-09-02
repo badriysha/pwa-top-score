@@ -1,0 +1,294 @@
+:root {
+  --primaryColor: #0B223F;
+  --secondaryColor: #45C7FF;
+  --font: #fff;
+  --dividerColor: #D5D8DE;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  background-color: #F2F2F2;
+}
+
+.card,
+.collapsible {
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.1) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 3px;
+  color: var(--primaryColor);
+}
+
+/* NAVBAR */
+
+nav {
+  background-color: var(--primaryColor);
+}
+
+nav ul a,
+nav .brand-logo {
+  color: var(--font);
+}
+
+nav ul a {
+  font-weight: 300;
+}
+
+p {
+  line-height: 2rem;
+  font-weight: 300;
+}
+
+.sidenav-trigger {
+  padding-top: 6px;
+}
+
+.preloader-wrapper {
+  position: absolute;
+  left: 45%;
+  top: 50%;
+}
+
+/* PARALLAX */
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  width: 100%;
+  color: white;
+}
+
+.parallax-container .section {
+  border: none;
+  width: 100%;
+}
+
+/* LEAGUES */
+.card-border:hover {
+  box-shadow: 0px 0px 2px 1px rgba(11, 34, 63, 0.25);
+}
+
+.card-image img {
+  padding: 10px;
+  border-bottom: 1px solid var(--dividerColor);
+  height: 280px;
+}
+
+.card-content h6 {
+  font-weight: 500;
+  line-height: 5px;
+}
+
+/* TOPBAR */
+.top-bar {
+  margin: 15px 0;
+  background-color: var(--primaryColor);
+  height: 42px;
+  width: 100%;
+}
+
+.top-bar h5 {
+  color: var(--font);
+  padding: 10px 8px;
+  font-size: 20px;
+}
+
+.img-topbar {
+  height: 36px;
+  float: left;
+  margin-top: 6px;
+  padding: 0 10px;
+}
+
+.t-head {
+  background-color: var(--primaryColor);
+  color: var(--font);
+}
+
+.t-head tr th {
+  border-radius: 0 !important;
+  line-height: 10px !important;
+  font-weight: 400;
+}
+
+.td-standings {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.img-standings {
+  width: 24px;
+  max-height: 26px;
+  float: left;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.card-header {
+  background-color: var(--primaryColor);
+}
+
+.card-tabs {
+  border-top: 1px solid var(--font);
+}
+
+.card-header p {
+  color: var(--font);
+}
+
+.ic-navbar button i,
+.ic-navbar a i {
+  font-size: 32px;
+  color: var(--font);
+}
+
+.tabs .tab {
+  background-color: var(--primaryColor);
+}
+
+.tabs .tab a {
+  color: var(--font);
+  font-weight: 300;
+}
+
+.tabs .tab a:hover {
+  background-color: rgba(110, 207, 249, 0.1);
+  color: var(--font);
+}
+
+.tabs .tab a:hover,
+.tabs .tab a.active {
+  color: var(--font);
+}
+
+.tabs .tab a:focus,
+.tabs .tab a:focus.active {
+  background-color: rgba(110, 207, 249, 0.1);
+  color: var(--font);
+  font-weight: 400;
+}
+
+.tabs .indicator {
+  background-color: var(--secondaryColor);
+  height: 4px;
+}
+
+.ul-col-1 li,
+.ul-col-2 li {
+  margin: 18px 0;
+  font-weight: 400;
+}
+
+.ul-col-2 li,
+.ul-col-2 li a {
+  font-weight: 300;
+  color: var(--primaryColor);
+}
+
+.collapsible-body {
+  padding: 0px;
+  background-color: var(--secondaryColor);
+}
+
+.collapsible-body p {
+  color: var(--font);
+  font-weight: 400;
+}
+
+/* ABOUT ME */
+.me-image {
+  margin: 15px 0;
+  border-radius: 50%;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.56);
+  max-height: 150px;
+}
+
+.about {
+  margin-bottom: 10px;
+}
+
+.about img {
+  /* float: left; */
+  margin-right: 6px;
+  height: 28px;
+  margin-top: 6px;
+}
+
+.btn-login {
+  background-color: #0B223F;
+  border-radius: 6px;
+  padding: 9px 15px;
+  width: 80%;
+  color: var(--font);
+  font-weight: 300;
+}
+
+/* FAVORITE */
+.img-favorit {
+  float: left;
+  padding-right: 10px;
+  height: 42px;
+  width: 40px;
+}
+
+/* FOOTER */
+.page-footer {
+  background-color: rgb(10, 36, 67);
+}
+
+.footer-copyright {
+  background-color: var(--primaryColor) !important;
+}
+
+.ic-social {
+  float: left;
+  padding: 6px 6px 0px 0px;
+}
+
+/* TABLET DEVICE */
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+/* MOBILE DEVICE */
+@media only screen and (max-width : 600px) {
+  .parallax-container {
+    height: 220px;
+  }
+
+  #index-banner .section {
+    top: 0;
+  }
+
+  .btn-star {
+    right: -30;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
